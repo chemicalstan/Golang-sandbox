@@ -16,3 +16,9 @@ func newDeck() deck {
 	}
 	return cards
 }
+
+func (d deck) deal(handSize int) (deck, deck) {
+	start := d[:handSize]
+	rest := d[handSize:]
+	return start, rest
+}
